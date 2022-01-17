@@ -1,0 +1,27 @@
+{
+  "name": "study-typescript",
+  "version": "1.0.0",
+  "description": "``` npm install -g typescript tsc --init ```",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmfhrmfoaj-tech/study-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmfhrmfoaj-tech/study-typescript/issues"
+  },
+  "homepage": "https://github.com/vmfhrmfoaj-tech/study-typescript#readme",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  }
+}
