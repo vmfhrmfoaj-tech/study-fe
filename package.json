@@ -26,6 +26,6 @@
     "start:run": "nodemon build/index.js",
     "start": "concurrently npm:start:*",
     "todo": "tsc && node ./build/index.js",
-    "sort": "tsc ./src/sorting/Sorter.ts ./src/sorting/index.ts --outDir ./build/sorting && node ./build/sorting/index.js"
+    "sort": "tsc && node ./build/sorting/index.js"
   }
 }
