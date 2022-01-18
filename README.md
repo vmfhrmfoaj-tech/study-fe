@@ -27,3 +27,7 @@ npm install inquirer @types/inquirer
 -- inquirer와 concurrently동시 수행시 arrow키 버그있음
 -- tsc && node build/index.js
 ```
+
+```
+tsc ./src/sorting/Sorter.ts ./src/sorting/index.ts --outDir ./build/sorting
+```
