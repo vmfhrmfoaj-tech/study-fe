@@ -21,3 +21,7 @@ node hello.js
 npm init -y
 npm install nodemon concurrently
 ```
+
+```
+npm install inquirer @types/inquirer
+```

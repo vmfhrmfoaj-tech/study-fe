@@ -15,7 +15,9 @@
   },
   "homepage": "https://github.com/vmfhrmfoaj-tech/study-typescript#readme",
   "dependencies": {
+    "@types/inquirer": "^8.1.3",
     "concurrently": "^7.0.0",
+    "inquirer": "^8.2.0",
     "nodemon": "^2.0.15"
   },
   "scripts": {
