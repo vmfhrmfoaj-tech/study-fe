@@ -20,6 +20,7 @@ class TodoConsole {
   displayTodoList(): void {
     console.log(
       `=====${this.todoCollection.userName}=====` +
+        `${this.showCompleted ? "(All)" : "(InCompleted)"}` +
         `(${this.todoCollection.getItemCounts().incomplete} items todo)`
     );
 
@@ -47,6 +48,13 @@ class TodoConsole {
           case Commands.Add:
             this.promptAdd();
             break;
+          case Commands.Purge:
+            this.todoCollection.removeComplete();
+            this.promptUser();
+            break;
+          case Commands.Complete:
+            this.promptComplete();
+            break;
         }
       });
   }
@@ -63,6 +71,38 @@ class TodoConsole {
         if (answer["add"] !== "") {
           this.todoCollection.addTodo(answer["add"]);
         }
+        this.promptUser();
+      });
+  }
+
+  promptComplete(): void {
+    console.clear();
+    inquirer
+      .prompt({
+        type: "checkbox",
+        name: "complete",
+        message: "Mark Tasks Complete",
+        choices: this.todoCollection
+          .getTodoItems(this.showCompleted)
+          .map((item) => ({
+            name: item.task,
+            value: item.id,
+            checked: item.complete,
+          })),
+      })
+      .then((answers) => {
+        const completedTasks = answers["complete"] as number[];
+        completedTasks.forEach((id) =>
+          this.todoCollection.markComplete(id, true)
+        );
+        this.todoCollection
+          .getTodoItems(true)
+          .forEach((item) =>
+            this.todoCollection.markComplete(
+              item.id,
+              completedTasks.find((id) => id === item.id) !== undefined
+            )
+          );
         this.promptUser();
       });
   }
