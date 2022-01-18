@@ -7,7 +7,10 @@ import { Commands } from "../model/Commands";
 class TodoConsole {
   private todoCollection: TodoCollection;
 
+  private showCompleted: boolean;
+
   constructor() {
+    this.showCompleted = true;
     const sampleTodos: TodoItem[] = data.map(
       (item) => new TodoItem(item.id, item.task, item.complete)
     );
@@ -21,7 +24,7 @@ class TodoConsole {
     );
 
     this.todoCollection
-      .getTodoItems(true)
+      .getTodoItems(this.showCompleted)
       .forEach((item) => item.printDetails());
   }
 
@@ -36,9 +39,31 @@ class TodoConsole {
         choices: Object.values(Commands),
       })
       .then((answer) => {
-        if (answer["command"] !== Commands.Quit) {
-          this.promptUser();
+        switch (answer["command"]) {
+          case Commands.Toggle:
+            this.showCompleted = !this.showCompleted;
+            this.promptUser();
+            break;
+          case Commands.Add:
+            this.promptAdd();
+            break;
         }
+      });
+  }
+
+  promptAdd(): void {
+    console.clear();
+    inquirer
+      .prompt({
+        type: "input",
+        name: "add",
+        message: "Enter task : ",
+      })
+      .then((answer) => {
+        if (answer["add"] !== "") {
+          this.todoCollection.addTodo(answer["add"]);
+        }
+        this.promptUser();
       });
   }
 }
