@@ -8,7 +8,8 @@
     "test:1": "jest ./src/__tests__/01_basic.js",
     "test:2": "jest ./src/__tests__/02_async.js",
     "test:3": "jest ./src/__tests__/03_before-after.js",
-    "test:4": "jest ./src/__tests__/04_fn_spy.js --watch"
+    "test:4": "jest ./src/__tests__/04_fn_spy.js",
+    "test:5": "jest ./src/__tests__/05_userService.js --watch"
   },
   "keywords": [],
   "author": "",
