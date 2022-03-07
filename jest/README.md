@@ -2,11 +2,13 @@
 
 ref:
 
+- https://jestjs.io/
 - https://www.daleseo.com/jest-basic/
 
 ### 설치
 
 ```sh
+# https://jestjs.io/docs/getting-started
 $ npm init -y
 $ npm install jest
 ```
@@ -34,4 +36,11 @@ test.js 로 끝나는 파일 대상.
 
 ```sh
 $ npm test
+$ npm test ./src/__tests__/01_basic.js
+```
+
+### jest cli options
+
+```
+https://jestjs.io/docs/cli
 ```
