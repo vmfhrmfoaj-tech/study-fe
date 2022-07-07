@@ -1,0 +1,36 @@
+Arguments: 
+  /home/vmfhrmfoaj/.nvm/versions/node/v14.17.0/bin/node /home/vmfhrmfoaj/.nvm/versions/node/v14.17.0/bin/yarn init
+
+PATH: 
+  /apps/apache-maven-3.8.1/bin:/home/vmfhrmfoaj/.local/bin:/home/vmfhrmfoaj/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/apps/apache-maven-3.8.1/bin:/home/vmfhrmfoaj/.nvm/versions/node/v14.17.0/bin:/home/vmfhrmfoaj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Python39/Scripts/:/mnt/c/Python39/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/dev/tools/java-1.8.0-openjdk-1.8.0.212-1.b04.ojdkbuild.windows.x86_64/bin:/mnt/c/Program Files/instantclient_19_9_win32:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/vmfhrmfoaj/AppData/Local/Microsoft/WindowsApps:/mnt/c/dev/tools/apache-maven-3.8.1/bin:/mnt/c/Users/vmfhrmfoaj/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/dev/tools/node-v16.14.2-win-x64/:/apps/jdk-11.0.11-ojdkbuild-linux-x64/bin:/apps/jdk-11.0.11-ojdkbuild-linux-x64/bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  14.17.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/home/vmfhrmfoaj/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:137023:13)
+      at Interface.emit (events.js:376:20)
+      at Interface._ttyWrite (readline.js:880:16)
+      at ReadStream.onkeypress (readline.js:213:10)
+      at ReadStream.emit (events.js:376:20)
+      at emitKeys (internal/readline/utils.js:345:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1149:36)
+      at ReadStream.emit (events.js:376:20)
+      at addChunk (internal/streams/readable.js:309:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
